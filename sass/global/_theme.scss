@@ -1,16 +1,19 @@
-$color-primary: #3a00ff !default;
-$color-primary-alt: #6f6ffd !default;
-$color-secondary: #d42257 !default;
-$color-background: #d2fbf7 !default;
+$tron-blue: #00FFFF !default;
+$legacy-blue: #00BFFF !default;
+$tron-red: #d42257 !default;
+$white-light: #E0FFFF;
+$tron-orange: #FF6600;
+$tron-yellow: #FFD700;
+$grid-black: #0A0A0A !default;
 
 $brand-colors: (
-  primary: $color-primary,
-  primary-alt: $color-primary-alt,
-  secondary: $color-secondary,
+  primary: $tron-blue,
+  primary-alt: $legacy-blue,
+  secondary: $tron-red,
 ) !default;
 
 $color-body: scale-color(
-  $color-primary,
+  $tron-blue,
   $lightness: -30%,
   $saturation: -50%
 ) !default;
@@ -19,7 +22,7 @@ $color-gray: mix(#767676, $color-body, 70%) !default;
 $colors: map-merge(
   $brand-colors,
   (
-    background: $color-background,
+    background: $grid-black,
     text: $color-body,
     light: #fff,
   )

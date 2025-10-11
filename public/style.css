@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 /*
  * [Modified] Modern CSS Reset
  * @link https://github.com/hankchizljaw/modern-css-reset
@@ -58,13 +58,13 @@ select {
   }
 }
 :root {
-  --color-primary: #3a00ff;
-  --color-primary-alt: #6f6ffd;
+  --color-primary: #00FFFF;
+  --color-primary-alt: #00BFFF;
   --color-secondary: #d42257;
-  --color-background: #d2fbf7;
-  --color-text: #412d86;
+  --color-background: #0A0A0A;
+  --color-text: #2d8686;
   --color-light: #fff;
-  --color-anchor: #3a00ff;
+  --color-anchor: #00FFFF;
   --font-family: "Baloo 2", sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
