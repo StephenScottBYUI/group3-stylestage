@@ -1,21 +1,21 @@
-@import "fonts";
+@import "/sass/1.\ Global\ CSS/font";
 
 // You can modify the theme directly, or override some of the variables
 // Overrides just need placed prior to the theme import
 // For example:
 // $color-primary: #3a0;
-@import "theme";
-@import "reset";
-@import "logomark";
-@import "typography";
-@import "layout";
-@import "header";
-@import "nav";
-@import "about";
-@import "guidelines";
-@import "contribute";
-@import "files";
-@import "styles";
-@import "profile";
-@import "footer";
-@import "links";
+@import "/sass/1.\ Global\ CSS/theme";
+@import "/sass/1.\ Global\ CSS/reset";
+@import "/sass/4.\ Utility\ styles/logomark";
+@import "/sass/3.\ Block\ related\ styles/typography";
+@import "/sass/2.\ Composition\ related\ styles/layout";
+@import "/sass/3.\ Block\ related\ styles/header";
+@import "/sass/3.\ Block\ related\ styles/nav";
+@import "/sass/3.\ Block\ related\ styles/about";
+@import "/sass/3.\ Block\ related\ styles/guidelines";
+@import "/sass/3.\ Block\ related\ styles/contribute";
+@import "/sass/3.\ Block\ related\ styles/files";
+@import "/sass/1.\ Global\ CSS/styles";
+@import "/sass/3.\ Block\ related\ styles/profile";
+@import "/sass/3.\ Block\ related\ styles/footer";
+@import "/sass/1.\ Global\ CSS/links";
