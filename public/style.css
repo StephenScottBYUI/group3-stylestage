@@ -33,8 +33,28 @@ body {
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
-}
+  background-color: #0A0A0A; /*solid background, start of grid*/
+  background-image: 
+    linear-gradient(0deg, #7DFDFE 1px, transparent 1px), /*color of horizontal line*/
+    linear-gradient(90deg, #7DFDFE 1px,transparent 1px); /*color of vertical line*/
+  background-size: 50px 50px; /*size of grid cell*/
+  }
 
+  /*movement in background when moving down the grid*/
+body::before{
+  content: "";
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(0deg, #7DFDFE 1px, transparent 1px), /*color of horizontal line*/
+    linear-gradient(90deg, #7DFDFE 1px,transparent 1px); /*color of vertical line*/
+  background-size: 50px 50px; /*size of grid cell*/
+  z-index: -1;
+  filter: drop-shadow(0 0 3px #0A0A0A);
+}
 /* Make images easier to work with */
 img {
   display: block;
@@ -59,7 +79,7 @@ select {
   }
 }
 :root {
-  --color-primary: #00FFFF;
+  --color-primary: #7DFDFE;
   --color-primary-alt: #00BFFF;
   --color-secondary: #d42257;
   --color-background: #0A0A0A;
