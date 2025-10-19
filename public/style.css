@@ -51,29 +51,8 @@ body {
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
-  background-color: #0A0A0A; /*solid background, start of grid*/
-  background-image: 
-    linear-gradient(0deg, #7DFDFE 1px, transparent 1px), /*color of horizontal line*/
-    linear-gradient(90deg, #7DFDFE 1px,transparent 1px); /*color of vertical line*/
-  background-size: 50px 50px; /*size of grid cell*/
-  color:rgba(0, 255, 255, 0.573); /*font color*/
-  }
-
-  /*movement in background when moving down the grid*/
-body::before{
-  content: "";
-  position: fixed;
-  top:0;
-  left:0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(0deg, #7DFDFE 1px, transparent 1px), /*color of horizontal line*/
-    linear-gradient(90deg, #7DFDFE 1px,transparent 1px); /*color of vertical line*/
-  background-size: 50px 50px; /*size of grid cell*/
-  z-index: -1;
-  filter: drop-shadow(0 0 3px #0A0A0A);
 }
+
 /* Make images easier to work with */
 img {
   display: block;
@@ -87,17 +66,6 @@ textarea,
 select {
   font: inherit;
 }
-.container{
-  position: relative;
-  padding: 2rem;
-  margin: 2rem;
-  background: black;
-  border: 2px solid #7DFDFE;
-  box-shadow: 0 0 8px #7DFDFE;
-  overflow: hidden;
-}
-
-
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
@@ -108,7 +76,6 @@ select {
     scroll-behavior: auto !important;
   }
 }
-<<<<<<< HEAD
 .skip-link {
   position: absolute;
   top: auto;
@@ -160,24 +127,6 @@ nav ul a:hover::before, nav ul a:focus::before {
 }
 nav ul li {
   margin: 0.25rem;
-=======
-:root {
-  --color-primary: #7DFDFE;
-  --color-primary-alt: #00BFFF;
-  --color-secondary: #d42257;
-  --color-background: #0A0A0A;
-  --color-text: #2d8686;
-  --color-light: #fff;
-  --color-anchor: #00FFFF;
-  --font-family: "Baloo 2", sans-serif;
-  --font-weight-strong: 500;
-  --font-size-h1: 6rem;
-  --font-size-h2: 3rem;
-  --font-size-h3: 2rem;
-  --font-size-h4: 1.35rem;
-  --font-size-text: 1.15rem;
-  --border-radius: 8px;
->>>>>>> 02615c91ea7a0403b4db303bf6db6fd8bcb68db5
 }
 
 #about section:nth-child(2) {
@@ -204,7 +153,7 @@ nav ul li {
   padding: 0.25em 0.5em;
   background-color: var(--color-light);
 }
-/*#about section:nth-child(2)::before {
+#about section:nth-child(2)::before {
   position: absolute;
   top: 60%;
   left: 50%;
@@ -217,7 +166,7 @@ nav ul li {
   opacity: 0.8;
   content: "";
   z-index: -1;
-}*/
+}
 @media (max-width: 35rem) {
   #about section:nth-child(2)::before {
     transform: scale(2) translate(-25%, -25%);

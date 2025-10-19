@@ -1,13 +1,11 @@
-@use "../global/theme" as t;
-@use "../global/fonts" as font;
-@use "../global/utility" as u;
+@use "../global";
 $header: "header .container";
 
 #{$header} {
-  background-color: t.$background-color;
+  background-color: global.$background-color;
   display: flex;
   flex-direction: column;
   max-width: 90%;
-  @include u.center-flex;
-  @include u.center;
+  @include global.center-flex;
+  @include global.center;
 }
