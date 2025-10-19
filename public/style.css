@@ -38,6 +38,7 @@ body {
     linear-gradient(0deg, #7DFDFE 1px, transparent 1px), /*color of horizontal line*/
     linear-gradient(90deg, #7DFDFE 1px,transparent 1px); /*color of vertical line*/
   background-size: 50px 50px; /*size of grid cell*/
+  color:rgba(0, 255, 255, 0.573); /*font color*/
   }
 
   /*movement in background when moving down the grid*/
@@ -68,6 +69,17 @@ textarea,
 select {
   font: inherit;
 }
+.container{
+  position: relative;
+  padding: 2rem;
+  margin: 2rem;
+  background: black;
+  border: 2px solid #7DFDFE;
+  box-shadow: 0 0 8px #7DFDFE;
+  overflow: hidden;
+}
+
+
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
