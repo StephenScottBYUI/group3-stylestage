@@ -1,12 +1,13 @@
-@import "global/fonts";
-
 // You can modify the theme directly, or override some of the variables
 // Overrides just need placed prior to the theme import
 // For example:
 // $color-primary: #3a0;
-@import "global/reset";
-@import "global/theme";
-@import "block/about";
-@import "block/footer";
-@import "block/header";
-@import "block/nav";
+
+//Stephen- I have made a global index forwarding. That way when you use anything from the global all you have to do is @use 'global' and then you can use anything from the global file without having to do @use for each file in the global file. If you create a new file in the global folder just make sure to update the _index.scss file with the file. Namespace you will use for the variable is global.(variable name). See header or skip link files for examples of how this works.
+
+@use "global";
+@use "block/skip-link";
+@use "block/header";
+@use "block/nav";
+@use "block/about";
+@use "block/footer";

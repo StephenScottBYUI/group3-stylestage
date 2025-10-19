@@ -1,0 +1,13 @@
+@use "../global";
+
+.skip-link {
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  background-color: global.$background-color;
+  color: #fff;
+  font-size: 1.125rem;
+  overflow: hidden;
+}
