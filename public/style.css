@@ -190,6 +190,9 @@ header {
   color: var(--color-primary);
   text-align: center;
 }
+header h1 {
+  text-align: center;
+}
 header h2 {
   max-width: 30ch;
 }
