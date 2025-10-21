@@ -1,11 +1,11 @@
-@use "../global";
+@use "../global" as g;
 $header: "header .container";
 
 #{$header} {
-  background-color: global.$background-color;
+  background-color: g.$background-color;
   display: flex;
   flex-direction: column;
   max-width: 90%;
-  @include global.center-flex;
-  @include global.center;
+  @include g.center-flex;
+  @include g.center;
 }
