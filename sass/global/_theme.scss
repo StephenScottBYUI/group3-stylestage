@@ -23,13 +23,11 @@ $color-body: color.scale(
 ) !default;
 $color-gray: color.mix(#767676, $color-body, $weight: 70%) !default;
 
-$colors: map.merge(
-  $brand-colors,
-  (
-    background: $grid-black,
-    text: $color-body,
-    light: #fff,
-  )
+$colors: (
+  text: $white-light,
+  highlights: $legacy-blue,
+  bg-color: $background-color,
+  special-text: $tron-red,
 );
 
 @function color($key) {

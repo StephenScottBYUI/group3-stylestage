@@ -5,8 +5,8 @@
   --color-primary-alt: #00bfff;
   --color-secondary: #d42257;
   --color-background: #0a0a0a;
-  --color-text: rgb(44.625, 133.875, 133.875);
-  --color-light: #fff;
+  --color-text: #e0ffff;
+  --color-dark: #00bfff;
   --color-anchor: #00ffff;
   --font-family: f.$copy-font;
   --font-weight-strong: 500;
@@ -194,6 +194,7 @@ nav ul li {
 }
 
 body {
+  color: #e0ffff;
   min-height: 100vh;
   font-size: 100%;
   line-height: 1.5;

@@ -1,6 +1,7 @@
 @use "../global" as g;
 
 body {
+  color: g.color(text);
   min-height: 100vh;
   font-size: 100%;
   line-height: 1.5;
