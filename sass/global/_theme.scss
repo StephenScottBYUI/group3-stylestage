@@ -1,3 +1,4 @@
+@use "fonts" as f;
 $tron-blue: #00ffff !default;
 $legacy-blue: #00bfff !default;
 $tron-red: #d42257 !default;
@@ -37,6 +38,10 @@ $colors: map-merge(
   @return "%23" + str-slice("#{color($color)}", 2, -1);
 }
 
+@function font-family($key) {
+  @return map-get($font-families, $key);
+}
+
 $link-color: color(primary) !default;
 $border-radius: 8px !default;
 
@@ -55,6 +60,12 @@ $font-sizes: (
   text: $font-size-text,
 );
 
+$font-families: (
+  h1: f.$heading-font,
+  h2: f.$heading-font,
+  p: f.$copy-font,
+);
+
 // stylelint-disable
 :root {
   @each $key, $color in $colors {
@@ -62,11 +73,15 @@ $font-sizes: (
   }
 
   --color-anchor: #{$link-color};
-  --font-family: "Baloo 2", sans-serif;
+  --font-family: f.$copy-font;
   --font-weight-strong: #{$font-weight-strong};
 
   @each $key, $size in $font-sizes {
     --font-size-#{$key}: #{$size};
+  }
+
+  @each $key, $font in $font-families {
+    --font-family-#{$key}: #{$font};
   }
 
   --border-radius: #{$border-radius};

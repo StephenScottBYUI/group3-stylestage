@@ -1,13 +1,16 @@
+@use "../global" as g;
+
 body {
   min-height: 100vh;
   font-size: 100%;
   line-height: 1.5;
+  font-family: g.font-family(p);
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
-  background-color: #0a0a0a; /*solid background, start of grid*/
-  background-image: linear-gradient(0deg, #7dfdfe 1px, transparent 1px),
+  background-color: g.$background-color; /*solid background, start of grid*/
+  background-image: linear-gradient(0deg, g.$legacy-blue 1px, transparent 1px),
     /*color of horizontal line*/
-      linear-gradient(90deg, #7dfdfe 1px, transparent 1px); /*color of vertical line*/
+      linear-gradient(90deg, g.$legacy-blue 1px, transparent 1px); /*color of vertical line*/
   background-size: 50px 50px; /*size of grid cell*/
 }
 
@@ -19,12 +22,12 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(0deg, #7dfdfe 1px, transparent 1px),
+  background-image: linear-gradient(0deg, g.$legacy-blue 1px, transparent 1px),
     /*color of horizontal line*/
-      linear-gradient(90deg, #7dfdfe 1px, transparent 1px); /*color of vertical line*/
+      linear-gradient(90deg, g.$legacy-blue 1px, transparent 1px); /*color of vertical line*/
   background-size: 50px 50px; /*size of grid cell*/
   z-index: -1;
-  filter: drop-shadow(0 0 3px #0a0a0a);
+  filter: drop-shadow(0 0 3px g.$grid-black);
 }
 
 //I added my image that I created as a background if you want to test it out.
@@ -41,8 +44,13 @@ body::before {
   position: relative;
   padding: 2rem;
   margin: 2rem;
-  background: black;
-  border: 2px solid #7dfdfe;
-  box-shadow: 0 0 8px #7dfdfe;
+  background: g.$background-color;
+  border: 2px solid g.$legacy-blue;
+  box-shadow: 0 0 8px g.$legacy-blue;
   overflow: hidden;
+}
+
+h1,
+h2 {
+  font-family: g.font-family(h1);
 }

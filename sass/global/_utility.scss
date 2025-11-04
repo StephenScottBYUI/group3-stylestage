@@ -1,3 +1,5 @@
+@use "theme" as t;
+
 @mixin center {
   width: 100%;
   margin: 0 auto;
@@ -7,4 +9,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+//ads a glow around text. Use for headers
+@mixin glow-text($color: t.$tron-red, $text-color: t.$white-light) {
+  color: $text-color;
+  font-weight: bold;
+  text-shadow: 0 0 4px $color, 0 0 8px $color, 0 0 12px $color, 0 0 16px $color,
+    0 0 24px $color;
 }
