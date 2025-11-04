@@ -1,3 +1,5 @@
+@use "sass:map";
+@use "sass:color";
 @use "fonts" as f;
 $tron-blue: #00ffff !default;
 $legacy-blue: #00bfff !default;
@@ -14,14 +16,14 @@ $brand-colors: (
   secondary: $tron-red,
 ) !default;
 
-$color-body: scale-color(
+$color-body: color.scale(
   $tron-blue,
   $lightness: -30%,
   $saturation: -50%
 ) !default;
-$color-gray: mix(#767676, $color-body, 70%) !default;
+$color-gray: color.mix(#767676, $color-body, $weight: 70%) !default;
 
-$colors: map-merge(
+$colors: map.merge(
   $brand-colors,
   (
     background: $grid-black,
@@ -31,7 +33,7 @@ $colors: map-merge(
 );
 
 @function color($key) {
-  @return map-get($colors, $key);
+  @return map.get($colors, $key);
 }
 
 @function svgColor($color) {
@@ -39,7 +41,7 @@ $colors: map-merge(
 }
 
 @function font-family($key) {
-  @return map-get($font-families, $key);
+  @return map.get($font-families, $key);
 }
 
 $link-color: color(primary) !default;
