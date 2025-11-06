@@ -8,13 +8,16 @@ $header: "header .container";
   max-width: 90%;
   @include g.center-flex;
   @include g.center;
+  animation: lights-off 3s ease forwards;
+  animation-iteration-count: 4;
 
   h1 {
     @include g.glow-text(g.$legacy-blue, g.$white-light);
-    animation: text-pulse 1s infinite alternate;
+    animation: text-pulse 3s ease;
+    animation-iteration-count: 4;
+    font-size: 6rem;
   }
   h2 {
-    text-align: center;
     font-weight: 100;
     font-size: 1.25rem;
     //below this is for the underline
@@ -30,60 +33,234 @@ $header: "header .container";
       height: 2px;
       background: g.$legacy-blue;
       border-radius: 2px;
-      animation: glow-pulse 2s infinite alternate;
+      animation: glow-pulse 3s ease forwards;
+      animation-iteration-count: 4;
     }
+  }
+
+  h1,
+  h2,
+  p {
+    text-align: center;
   }
 
   @keyframes glow-pulse {
     0% {
+      box-shadow: 0 0 8px g.$legacy-blue, 0 0 20px g.$legacy-blue,
+        0 0 30px g.$legacy-blue;
+      background: g.$legacy-blue;
+    }
+    5% {
+      box-shadow: 0 0 8px g.$legacy-blue, 0 0 20px g.$legacy-blue,
+        0 0 30px g.$legacy-blue;
+      background: g.$legacy-blue;
+    }
+    8% {
       box-shadow: 0 0 4px g.$legacy-blue, 0 0 10px g.$legacy-blue;
+      background: g.$legacy-blue;
+    }
+    20% {
+      box-shadow: 0 0 4px g.$legacy-blue, 0 0 10px g.$legacy-blue;
+      background: g.$legacy-blue;
+    }
+    25% {
+      box-shadow: 0 0 8px g.$legacy-blue, 0 0 20px g.$legacy-blue,
+        0 0 30px g.$legacy-blue;
+      background: g.$legacy-blue;
+    }
+    35% {
+      box-shadow: 0 0 8px g.$legacy-blue, 0 0 20px g.$legacy-blue,
+        0 0 30px g.$legacy-blue;
+      background: g.$legacy-blue;
+    }
+    43% {
+      box-shadow: 0 0 4px g.$legacy-blue, 0 0 10px g.$legacy-blue;
+      background: g.$legacy-blue;
+    }
+    45% {
+      box-shadow: 0 0 4px g.$legacy-blue, 0 0 10px g.$legacy-blue;
+      background: g.$legacy-blue;
+    }
+    50% {
+      box-shadow: 0 0 8px g.$legacy-blue, 0 0 20px g.$legacy-blue,
+        0 0 30px g.$legacy-blue;
+      background: g.$legacy-blue;
+    }
+    58% {
+      box-shadow: 0 0 8px g.$legacy-blue, 0 0 20px g.$legacy-blue,
+        0 0 30px g.$legacy-blue;
+      background: g.$legacy-blue;
+    }
+    60% {
+      box-shadow: 0 0 4px g.$legacy-blue, 0 0 10px g.$legacy-blue;
+      background: g.$legacy-blue;
+    }
+    65% {
+      box-shadow: 0 0 4px g.$legacy-blue, 0 0 10px g.$legacy-blue;
+      background: g.$legacy-blue;
+    }
+    68% {
+      box-shadow: 0 0 8px g.$background-color, 0 0 20px g.$background-color,
+        0 0 30px g.$background-color;
+      background: g.$grid-black;
+    }
+    87% {
+      box-shadow: 0 0 8px g.$background-color, 0 0 20px g.$background-color,
+        0 0 30px g.$background-color;
+      background: g.$grid-black;
+    }
+    95% {
+      box-shadow: 0 0 8px g.$legacy-blue, 0 0 20px g.$legacy-blue,
+        0 0 30px g.$legacy-blue;
+      background: g.$legacy-blue;
     }
     100% {
       box-shadow: 0 0 8px g.$legacy-blue, 0 0 20px g.$legacy-blue,
         0 0 30px g.$legacy-blue;
+      background: g.$legacy-blue;
+    }
+  }
+
+  @keyframes lights-off {
+    0% {
+      background-color: g.$background-color;
+    }
+    5% {
+      background-color: g.$background-color;
+    }
+    8% {
+      background-color: darken(g.$background-color, 1%);
+    }
+    20% {
+      background-color: darken(g.$background-color, 1%);
+    }
+    25% {
+      background-color: g.$background-color;
+    }
+    35% {
+      background-color: g.$background-color;
+    }
+    43% {
+      background-color: darken(g.$background-color, 1%);
+    }
+    45% {
+      background-color: darken(g.$background-color, 1%);
+    }
+    50% {
+      background-color: g.$background-color;
+    }
+    58% {
+      background-color: g.$background-color;
+    }
+    60% {
+      background-color: darken(g.$background-color, 1%);
+    }
+    65% {
+      background-color: darken(g.$background-color, 1%);
+    }
+    68% {
+      background-color: g.$grid-black;
+    }
+    87% {
+      background-color: g.$grid-black;
+    }
+    95% {
+      background-color: g.$background-color;
+    }
+    100% {
+      background-color: g.$background-color;
     }
   }
 
   @keyframes text-pulse {
     0% {
+      text-shadow: 0 0 4px g.$legacy-blue, 0 0 8px g.$legacy-blue,
+        0 0 12px g.$legacy-blue, 0 0 16px g.$legacy-blue,
+        0 0 24px g.$legacy-blue;
+      color: g.$white-light;
+    }
+    5% {
+      text-shadow: 0 0 4px g.$legacy-blue, 0 0 8px g.$legacy-blue,
+        0 0 12px g.$legacy-blue, 0 0 16px g.$legacy-blue,
+        0 0 24px g.$legacy-blue;
+      color: g.$white-light;
+    }
+    8% {
       text-shadow: 0 0 2px g.$legacy-blue, 0 0 4px g.$legacy-blue,
         0 0 6px g.$legacy-blue, 0 0 8px g.$legacy-blue, 0 0 12px g.$legacy-blue;
+      color: g.$white-light;
+    }
+    20% {
+      text-shadow: 0 0 2px g.$legacy-blue, 0 0 4px g.$legacy-blue,
+        0 0 6px g.$legacy-blue, 0 0 8px g.$legacy-blue, 0 0 12px g.$legacy-blue;
+      color: g.$white-light;
+    }
+    25% {
+      text-shadow: 0 0 4px g.$legacy-blue, 0 0 8px g.$legacy-blue,
+        0 0 12px g.$legacy-blue, 0 0 16px g.$legacy-blue,
+        0 0 24px g.$legacy-blue;
+      color: g.$white-light;
     }
     35% {
-      text-shadow: 0 0 2px g.$legacy-blue, 0 0 4px g.$legacy-blue,
-        0 0 6px g.$legacy-blue, 0 0 8px g.$legacy-blue, 0 0 12px g.$legacy-blue;
+      text-shadow: 0 0 4px g.$legacy-blue, 0 0 8px g.$legacy-blue,
+        0 0 12px g.$legacy-blue, 0 0 16px g.$legacy-blue,
+        0 0 24px g.$legacy-blue;
+      color: g.$white-light;
     }
     43% {
-      text-shadow: 0 0 4px g.$legacy-blue, 0 0 8px g.$legacy-blue,
-        0 0 12px g.$legacy-blue, 0 0 16px g.$legacy-blue,
-        0 0 24px g.$legacy-blue;
+      text-shadow: 0 0 2px g.$legacy-blue, 0 0 4px g.$legacy-blue,
+        0 0 6px g.$legacy-blue, 0 0 8px g.$legacy-blue, 0 0 12px g.$legacy-blue;
+      color: g.$white-light;
     }
     45% {
+      text-shadow: 0 0 2px g.$legacy-blue, 0 0 4px g.$legacy-blue,
+        0 0 6px g.$legacy-blue, 0 0 8px g.$legacy-blue, 0 0 12px g.$legacy-blue;
+      color: g.$white-light;
+    }
+    50% {
       text-shadow: 0 0 4px g.$legacy-blue, 0 0 8px g.$legacy-blue,
         0 0 12px g.$legacy-blue, 0 0 16px g.$legacy-blue,
         0 0 24px g.$legacy-blue;
-    }
-    50% {
-      text-shadow: 0 0 2px g.$legacy-blue, 0 0 4px g.$legacy-blue,
-        0 0 6px g.$legacy-blue, 0 0 8px g.$legacy-blue, 0 0 12px g.$legacy-blue;
+      color: g.$white-light;
     }
     58% {
-      text-shadow: 0 0 2px g.$legacy-blue, 0 0 4px g.$legacy-blue,
-        0 0 6px g.$legacy-blue, 0 0 8px g.$legacy-blue, 0 0 12px g.$legacy-blue;
+      text-shadow: 0 0 4px g.$legacy-blue, 0 0 8px g.$legacy-blue,
+        0 0 12px g.$legacy-blue, 0 0 16px g.$legacy-blue,
+        0 0 24px g.$legacy-blue;
+      color: g.$white-light;
     }
     60% {
       text-shadow: 0 0 4px g.$legacy-blue, 0 0 8px g.$legacy-blue,
         0 0 12px g.$legacy-blue, 0 0 16px g.$legacy-blue,
         0 0 24px g.$legacy-blue;
+      color: g.$white-light;
     }
-    98% {
-      text-shadow: 0 0 4px g.$legacy-blue, 0 0 8px g.$legacy-blue,
-        0 0 12px g.$legacy-blue, 0 0 16px g.$legacy-blue,
-        0 0 24px g.$legacy-blue;
+    65% {
+      text-shadow: 0 0 2px g.$legacy-blue, 0 0 4px g.$legacy-blue,
+        0 0 6px g.$legacy-blue, 0 0 8px g.$legacy-blue, 0 0 12px g.$legacy-blue;
+      color: g.$white-light;
+    }
+    68% {
+      text-shadow: 0 0 2px g.$background-color, 0 0 4px g.$background-color,
+        0 0 6px g.$background-color, 0 0 8px g.$background-color,
+        0 0 12px g.$background-color;
+      color: g.$grid-black;
+    }
+    87% {
+      text-shadow: 0 0 2px g.$background-color, 0 0 4px g.$background-color,
+        0 0 6px g.$background-color, 0 0 8px g.$background-color,
+        0 0 12px g.$background-color;
+      color: g.$grid-black;
+    }
+    95% {
+      text-shadow: 0 0 2px g.$legacy-blue, 0 0 4px g.$legacy-blue,
+        0 0 6px g.$legacy-blue, 0 0 8px g.$legacy-blue, 0 0 12px g.$legacy-blue;
+      color: g.$white-light;
     }
     100% {
       text-shadow: 0 0 2px g.$legacy-blue, 0 0 4px g.$legacy-blue,
         0 0 6px g.$legacy-blue, 0 0 8px g.$legacy-blue, 0 0 12px g.$legacy-blue;
+      color: g.$white-light;
     }
   }
 }

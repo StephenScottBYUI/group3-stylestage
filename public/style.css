@@ -1,13 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 :root {
-  --color-primary: #00ffff;
-  --color-primary-alt: #00bfff;
-  --color-secondary: #d42257;
-  --color-background: #0a0a0a;
   --color-text: #e0ffff;
-  --color-dark: #00bfff;
-  --color-anchor: #00ffff;
+  --color-highlights: #00bfff;
+  --color-bg-color: #071621;
+  --color-special-text: #d42257;
+  --color-anchor: ;
   --font-family: f.$copy-font;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
@@ -101,15 +99,18 @@ header .container {
   align-items: center;
   width: 100%;
   margin: 0 auto;
+  animation: lights-off 3s ease forwards;
+  animation-iteration-count: 4;
 }
 header .container h1 {
   color: #e0ffff;
   font-weight: bold;
   text-shadow: 0 0 4px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff, 0 0 16px #00bfff, 0 0 24px #00bfff;
-  animation: text-pulse 1s infinite alternate;
+  animation: text-pulse 3s ease;
+  animation-iteration-count: 4;
+  font-size: 6rem;
 }
 header .container h2 {
-  text-align: center;
   font-weight: 100;
   font-size: 1.25rem;
   position: relative;
@@ -124,43 +125,194 @@ header .container h2::after {
   height: 2px;
   background: #00bfff;
   border-radius: 2px;
-  animation: glow-pulse 2s infinite alternate;
+  animation: glow-pulse 3s ease forwards;
+  animation-iteration-count: 4;
+}
+header .container h1,
+header .container h2,
+header .container p {
+  text-align: center;
 }
 @keyframes glow-pulse {
   0% {
+    box-shadow: 0 0 8px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+    background: #00bfff;
+  }
+  5% {
+    box-shadow: 0 0 8px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+    background: #00bfff;
+  }
+  8% {
     box-shadow: 0 0 4px #00bfff, 0 0 10px #00bfff;
+    background: #00bfff;
+  }
+  20% {
+    box-shadow: 0 0 4px #00bfff, 0 0 10px #00bfff;
+    background: #00bfff;
+  }
+  25% {
+    box-shadow: 0 0 8px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+    background: #00bfff;
+  }
+  35% {
+    box-shadow: 0 0 8px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+    background: #00bfff;
+  }
+  43% {
+    box-shadow: 0 0 4px #00bfff, 0 0 10px #00bfff;
+    background: #00bfff;
+  }
+  45% {
+    box-shadow: 0 0 4px #00bfff, 0 0 10px #00bfff;
+    background: #00bfff;
+  }
+  50% {
+    box-shadow: 0 0 8px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+    background: #00bfff;
+  }
+  58% {
+    box-shadow: 0 0 8px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+    background: #00bfff;
+  }
+  60% {
+    box-shadow: 0 0 4px #00bfff, 0 0 10px #00bfff;
+    background: #00bfff;
+  }
+  65% {
+    box-shadow: 0 0 4px #00bfff, 0 0 10px #00bfff;
+    background: #00bfff;
+  }
+  68% {
+    box-shadow: 0 0 8px #071621, 0 0 20px #071621, 0 0 30px #071621;
+    background: #0a0a0a;
+  }
+  87% {
+    box-shadow: 0 0 8px #071621, 0 0 20px #071621, 0 0 30px #071621;
+    background: #0a0a0a;
+  }
+  95% {
+    box-shadow: 0 0 8px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+    background: #00bfff;
   }
   100% {
     box-shadow: 0 0 8px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+    background: #00bfff;
+  }
+}
+@keyframes lights-off {
+  0% {
+    background-color: #071621;
+  }
+  5% {
+    background-color: #071621;
+  }
+  8% {
+    background-color: rgb(6.1075, 19.195, 28.7925);
+  }
+  20% {
+    background-color: rgb(6.1075, 19.195, 28.7925);
+  }
+  25% {
+    background-color: #071621;
+  }
+  35% {
+    background-color: #071621;
+  }
+  43% {
+    background-color: rgb(6.1075, 19.195, 28.7925);
+  }
+  45% {
+    background-color: rgb(6.1075, 19.195, 28.7925);
+  }
+  50% {
+    background-color: #071621;
+  }
+  58% {
+    background-color: #071621;
+  }
+  60% {
+    background-color: rgb(6.1075, 19.195, 28.7925);
+  }
+  65% {
+    background-color: rgb(6.1075, 19.195, 28.7925);
+  }
+  68% {
+    background-color: #0a0a0a;
+  }
+  87% {
+    background-color: #0a0a0a;
+  }
+  95% {
+    background-color: #071621;
+  }
+  100% {
+    background-color: #071621;
   }
 }
 @keyframes text-pulse {
   0% {
+    text-shadow: 0 0 4px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff, 0 0 16px #00bfff, 0 0 24px #00bfff;
+    color: #e0ffff;
+  }
+  5% {
+    text-shadow: 0 0 4px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff, 0 0 16px #00bfff, 0 0 24px #00bfff;
+    color: #e0ffff;
+  }
+  8% {
     text-shadow: 0 0 2px #00bfff, 0 0 4px #00bfff, 0 0 6px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff;
+    color: #e0ffff;
+  }
+  20% {
+    text-shadow: 0 0 2px #00bfff, 0 0 4px #00bfff, 0 0 6px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff;
+    color: #e0ffff;
+  }
+  25% {
+    text-shadow: 0 0 4px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff, 0 0 16px #00bfff, 0 0 24px #00bfff;
+    color: #e0ffff;
   }
   35% {
-    text-shadow: 0 0 2px #00bfff, 0 0 4px #00bfff, 0 0 6px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff;
+    text-shadow: 0 0 4px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff, 0 0 16px #00bfff, 0 0 24px #00bfff;
+    color: #e0ffff;
   }
   43% {
-    text-shadow: 0 0 4px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff, 0 0 16px #00bfff, 0 0 24px #00bfff;
+    text-shadow: 0 0 2px #00bfff, 0 0 4px #00bfff, 0 0 6px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff;
+    color: #e0ffff;
   }
   45% {
-    text-shadow: 0 0 4px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff, 0 0 16px #00bfff, 0 0 24px #00bfff;
+    text-shadow: 0 0 2px #00bfff, 0 0 4px #00bfff, 0 0 6px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff;
+    color: #e0ffff;
   }
   50% {
-    text-shadow: 0 0 2px #00bfff, 0 0 4px #00bfff, 0 0 6px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff;
+    text-shadow: 0 0 4px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff, 0 0 16px #00bfff, 0 0 24px #00bfff;
+    color: #e0ffff;
   }
   58% {
-    text-shadow: 0 0 2px #00bfff, 0 0 4px #00bfff, 0 0 6px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff;
+    text-shadow: 0 0 4px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff, 0 0 16px #00bfff, 0 0 24px #00bfff;
+    color: #e0ffff;
   }
   60% {
     text-shadow: 0 0 4px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff, 0 0 16px #00bfff, 0 0 24px #00bfff;
+    color: #e0ffff;
   }
-  98% {
-    text-shadow: 0 0 4px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff, 0 0 16px #00bfff, 0 0 24px #00bfff;
+  65% {
+    text-shadow: 0 0 2px #00bfff, 0 0 4px #00bfff, 0 0 6px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff;
+    color: #e0ffff;
+  }
+  68% {
+    text-shadow: 0 0 2px #071621, 0 0 4px #071621, 0 0 6px #071621, 0 0 8px #071621, 0 0 12px #071621;
+    color: #0a0a0a;
+  }
+  87% {
+    text-shadow: 0 0 2px #071621, 0 0 4px #071621, 0 0 6px #071621, 0 0 8px #071621, 0 0 12px #071621;
+    color: #0a0a0a;
+  }
+  95% {
+    text-shadow: 0 0 2px #00bfff, 0 0 4px #00bfff, 0 0 6px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff;
+    color: #e0ffff;
   }
   100% {
     text-shadow: 0 0 2px #00bfff, 0 0 4px #00bfff, 0 0 6px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff;
+    color: #e0ffff;
   }
 }
 
@@ -222,8 +374,8 @@ body::before {
 
 .container {
   position: relative;
-  padding: 2rem;
-  margin: 2rem;
+  padding: 1rem;
+  margin: 1rem;
   background: #071621;
   border: 2px solid #00bfff;
   box-shadow: 0 0 8px #00bfff;
@@ -233,6 +385,16 @@ body::before {
 h1,
 h2 {
   font-family: "Audiowide", arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #d42257;
+}
+a:hover {
+  color: #e0ffff;
+  font-weight: bold;
+  text-shadow: 0 0 4px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff, 0 0 16px #00bfff, 0 0 24px #00bfff;
 }
 
 #about section:nth-child(2) {
