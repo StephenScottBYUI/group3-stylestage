@@ -44,11 +44,14 @@ body::before {
 .container {
   position: relative;
   padding: 1rem;
-  margin: 1rem;
+
   background: g.$background-color;
   border: 2px solid g.$legacy-blue;
   box-shadow: 0 0 8px g.$legacy-blue;
   overflow: hidden;
+  max-width: 90%;
+  @include g.center;
+  margin-bottom: 1.5rem;
 }
 
 h1,
@@ -60,7 +63,32 @@ a {
   text-decoration: none;
   color: g.$tron-red;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     @include g.glow-text(g.$legacy-blue, g.$white-light);
+  }
+}
+
+svg {
+  fill: g.$tron-red;
+  height: 1rem;
+  width: auto;
+  overflow: visible;
+}
+
+.link-github:hover svg path,
+.link-github:focus-visible svg path {
+  fill: g.$white-light;
+  filter: drop-shadow(0 0 4px g.$legacy-blue)
+    drop-shadow(0 0 8px g.$legacy-blue) drop-shadow(0 0 12px g.$legacy-blue);
+}
+
+.link-github {
+  padding: 0.5rem;
+
+  &:hover {
+    border: 1px solid g.$white-light;
+    box-shadow: 0 0 8px g.$legacy-blue;
+    background-color: g.$tron-red;
   }
 }

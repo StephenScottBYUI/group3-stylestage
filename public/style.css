@@ -93,7 +93,6 @@ header .container {
   background-color: #071621;
   display: flex;
   flex-direction: column;
-  max-width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -375,11 +374,14 @@ body::before {
 .container {
   position: relative;
   padding: 1rem;
-  margin: 1rem;
   background: #071621;
   border: 2px solid #00bfff;
   box-shadow: 0 0 8px #00bfff;
   overflow: hidden;
+  max-width: 90%;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
 }
 
 h1,
@@ -391,10 +393,32 @@ a {
   text-decoration: none;
   color: #d42257;
 }
-a:hover {
+a:hover, a:focus-visible {
   color: #e0ffff;
   font-weight: bold;
   text-shadow: 0 0 4px #00bfff, 0 0 8px #00bfff, 0 0 12px #00bfff, 0 0 16px #00bfff, 0 0 24px #00bfff;
+}
+
+svg {
+  fill: #d42257;
+  height: 1rem;
+  width: auto;
+  overflow: visible;
+}
+
+.link-github:hover svg path,
+.link-github:focus-visible svg path {
+  fill: #e0ffff;
+  filter: drop-shadow(0 0 4px #00bfff) drop-shadow(0 0 8px #00bfff) drop-shadow(0 0 12px #00bfff);
+}
+
+.link-github {
+  padding: 0.5rem;
+}
+.link-github:hover {
+  border: 1px solid #e0ffff;
+  box-shadow: 0 0 8px #00bfff;
+  background-color: #d42257;
 }
 
 #about section:nth-child(2) {
@@ -431,7 +455,7 @@ a:hover {
   --logomark-height: 2em;
   --logomark-padding: 0;
   position: relative;
-  padding: 3rem 1rem;
+  padding: 3rem 0rem;
   background-color: var(--color-primary);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d2fbf7' fill-opacity='1'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-repeat: repeat-x;

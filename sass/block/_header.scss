@@ -5,7 +5,7 @@ $header: "header .container";
   background-color: g.$background-color;
   display: flex;
   flex-direction: column;
-  max-width: 90%;
+
   @include g.center-flex;
   @include g.center;
   animation: lights-off 3s ease forwards;
