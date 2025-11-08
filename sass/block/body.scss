@@ -91,4 +91,7 @@ svg {
     box-shadow: 0 0 8px g.$legacy-blue;
     background-color: g.$tron-red;
   }
+  &:active {
+    background-color: transparent;
+  }
 }

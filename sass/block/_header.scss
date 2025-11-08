@@ -1,5 +1,6 @@
 @use "../global" as g;
 $header: "header .container";
+@use "sass:color";
 
 #{$header} {
   background-color: g.$background-color;
@@ -129,10 +130,10 @@ $header: "header .container";
       background-color: g.$background-color;
     }
     8% {
-      background-color: darken(g.$background-color, 1%);
+      background-color: color.adjust(g.$background-color, $lightness: -1%);
     }
     20% {
-      background-color: darken(g.$background-color, 1%);
+      background-color: color.adjust(g.$background-color, $lightness: -1%);
     }
     25% {
       background-color: g.$background-color;
@@ -141,10 +142,10 @@ $header: "header .container";
       background-color: g.$background-color;
     }
     43% {
-      background-color: darken(g.$background-color, 1%);
+      background-color: color.adjust(g.$background-color, $lightness: -1%);
     }
     45% {
-      background-color: darken(g.$background-color, 1%);
+      background-color: color.adjust(g.$background-color, $lightness: -1%);
     }
     50% {
       background-color: g.$background-color;
@@ -153,10 +154,10 @@ $header: "header .container";
       background-color: g.$background-color;
     }
     60% {
-      background-color: darken(g.$background-color, 1%);
+      background-color: color.adjust(g.$background-color, $lightness: -1%);
     }
     65% {
-      background-color: darken(g.$background-color, 1%);
+      background-color: color.adjust(g.$background-color, $lightness: -1%);
     }
     68% {
       background-color: g.$grid-black;
