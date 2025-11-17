@@ -1,11 +1,10 @@
 @use "body";
-@use "global" as g;
+@use "../global" as g;
 body nav {
   @extend body, .container;
   margin-top: 1.5rem;
   height: fit-content;
-  max-height: 400px;
-  min-height: 300px;
+  min-height: 100px;
   ul {
     display: flex;
     flex-wrap: wrap;
