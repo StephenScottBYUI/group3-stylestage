@@ -427,6 +427,12 @@ body nav ul li {
   margin: 0.25rem;
 }
 
+/*--------------------*\
+#Import
+\*--------------------*/
+/*--------------------*\
+#About
+\*--------------------*/
 #about section:nth-child(2) {
   position: relative;
 }
@@ -442,14 +448,38 @@ body nav ul li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 1rem 0 2rem;
+  margin: 2rem 0 2rem;
   padding: 0;
   list-style: none;
 }
 #about section:nth-child(2) ul li {
-  margin: 0.25em;
-  padding: 0.25em 0.5em;
-  background-color: var(--color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px; /*Disc size */
+  height: 130px;
+  border-radius: 50%; /*Make them circular */
+  background: #0a0a0a;
+  color: #00bfff;
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  animation: tronPulse 2.5s ease-in-out infinite; /*PULSE */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#about section:nth-child(2) ul li::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border-radius: 50%;
+  border: 2px solid #00bfff;
+  box-shadow: 0 0 8px #00bfff, inset 0 0 8px #00bfff;
+  animation: tronSpin 6s linear infinite; /*SPIN */
+}
+#about section:nth-child(2) ul li:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 25px #00bfff inset 0 0 25px #00bfff;
 }
 @media (max-width: 35rem) {
   #about section:nth-child(2)::before {
@@ -457,6 +487,25 @@ body nav ul li {
   }
 }
 
+/*--------------------*\
+#CSS Element Spotlight
+\*--------------------*/
+@keyframes tronSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes tronPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px #00eaff, inset 0 0 10px #00eaff;
+  }
+  50% {
+    box-shadow: 0 0 20px #00eaff, inset 0 0 20px #00eaff;
+  }
+}
 .page-footer {
   --logomark-height: 2em;
   --logomark-padding: 0;
