@@ -57,12 +57,16 @@
           position: absolute;
           inset: 10px;
           border-radius: 50%;
-          border: 2px solid g.$legacy-blue;
+
+          border: 3px solid transparent;
+          border-top-color: g.$legacy-blue;
+          border-right-color: g.$legacy-blue;
+          border-bottom-color: g.$legacy-blue;
           box-shadow: 
             0 0 8px g.$legacy-blue, 
             inset 0 0 8px g.$legacy-blue;
 
-          animation: tronSpin 6s linear infinite; /*SPIN */
+          animation: tronSpin 1s linear infinite; /*SPIN */
         }
 
         &:hover {

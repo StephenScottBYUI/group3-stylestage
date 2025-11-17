@@ -473,9 +473,12 @@ body nav ul li {
   position: absolute;
   inset: 10px;
   border-radius: 50%;
-  border: 2px solid #00bfff;
+  border: 3px solid transparent;
+  border-top-color: #00bfff;
+  border-right-color: #00bfff;
+  border-bottom-color: #00bfff;
   box-shadow: 0 0 8px #00bfff, inset 0 0 8px #00bfff;
-  animation: tronSpin 6s linear infinite; /*SPIN */
+  animation: tronSpin 1s linear infinite; /*SPIN */
 }
 #about section:nth-child(2) ul li:hover {
   transform: scale(1.12);
