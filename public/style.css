@@ -456,6 +456,9 @@ body nav ul li {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 4px;
+  overflow-wrap: anywhere; /* break long tokens (slashes, parens, etc.) */
+  word-break: break-word;
   width: 130px; /*Disc size */
   height: 130px;
   border-radius: 50%; /*Make them circular */
