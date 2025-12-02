@@ -3,10 +3,7 @@
 \*--------------------*/
 
 @use "../global" as g;
-
-
-
-
+@use "sass:color";
 
 /*--------------------*\
 #About
@@ -39,10 +36,10 @@
         align-items: center;
         margin: 4px;
 
-        overflow-wrap: anywhere;      /* break long tokens (slashes, parens, etc.) */
-        word-break: break-word; 
+        overflow-wrap: anywhere; /* break long tokens (slashes, parens, etc.) */
+        word-break: break-word;
 
-        width: 130px;       /*Disc size */
+        width: 130px; /*Disc size */
         height: 130px;
         border-radius: 50%; /*Make them circular */
 
@@ -53,7 +50,7 @@
         padding: 1rem;
 
         position: relative;
-        animation: tronPulse 2.5s ease-in-out infinite;  /*PULSE */
+        animation: tronPulse 2.5s ease-in-out infinite; /*PULSE */
         transition: transform 0.2s ease, box-shadow 0.2s ease;
 
         &::before {
@@ -66,18 +63,14 @@
           border-top-color: g.$legacy-blue;
           border-right-color: g.$legacy-blue;
           border-bottom-color: g.$legacy-blue;
-          box-shadow: 
-            0 0 8px g.$legacy-blue, 
-            inset 0 0 8px g.$legacy-blue;
+          box-shadow: 0 0 8px g.$legacy-blue, inset 0 0 8px g.$legacy-blue;
 
           animation: tronSpin 1s linear infinite; /*SPIN */
         }
 
         &:hover {
           transform: scale(1.12);
-          box-shadow: 
-            0 0 25px g.$legacy-blue
-            inset 0 0 25px g.$legacy-blue;
+          box-shadow: 0 0 25px g.$legacy-blue inset 0 0 25px g.$legacy-blue;
         }
       }
     }
@@ -116,10 +109,6 @@
   }
 }
 
-
-
-
-
 /*--------------------*\
 #CSS Element Spotlight
 \*--------------------*/
@@ -134,14 +123,20 @@
 }
 
 @keyframes tronPulse {
-  0%, 100% {
-    box-shadow:
-      0 0 10px #00eaff,
-      inset 0 0 10px #00eaff;
+  0%,
+  100% {
+    box-shadow: 0 0 10px #00eaff, inset 0 0 10px #00eaff;
   }
   50% {
-    box-shadow:
-      0 0 20px #00eaff,
-      inset 0 0 20px #00eaff;
+    box-shadow: 0 0 20px #00eaff, inset 0 0 20px #00eaff;
   }
+}
+
+blockquote {
+  padding: 1rem;
+  background-color: color.adjust(g.$background-color, $lightness: 10%);
+  // border: 2px solid g.$legacy-blue;
+  box-shadow: 0.3rem 0.3rem 0.6rem
+      color.adjust(g.$background-color, $lightness: -10%),
+    -0.2rem -0.2rem 0.5rem color.adjust(g.$background-color, $lightness: 20%);
 }
