@@ -134,9 +134,10 @@
 
 blockquote {
   padding: 1rem;
-  background-color: color.adjust(g.$background-color, $lightness: 10%);
+  border: 3px solid color.adjust(g.$background-color, $lightness: 10%);
   // border: 2px solid g.$legacy-blue;
   box-shadow: 0.3rem 0.3rem 0.6rem
       color.adjust(g.$background-color, $lightness: -10%),
     -0.2rem -0.2rem 0.5rem color.adjust(g.$background-color, $lightness: 20%);
+  border-radius: 10px;
 }

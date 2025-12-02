@@ -522,8 +522,9 @@ body nav ul li {
 }
 blockquote {
   padding: 1rem;
-  background-color: rgb(15.925, 50.05, 75.075);
+  border: 3px solid rgb(15.925, 50.05, 75.075);
   box-shadow: 0.3rem 0.3rem 0.6rem hsl(205.3846153846, 65%, -2.1568627451%), -0.2rem -0.2rem 0.5rem rgb(24.85, 78.1, 117.15);
+  border-radius: 10px;
 }
 
 .page-footer {
