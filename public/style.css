@@ -571,7 +571,8 @@ blockquote {
 /*--------------------*\
 #Lightcycle SVG
 \*--------------------*/
-section.container {
+section.container,
+#files > div.container {
   position: relative;
   overflow: visible;
   isolation: isolate;
@@ -589,7 +590,8 @@ section.container {
 /* =========================
    BIKE
    ========================= */
-section.container::after {
+section.container::after,
+#files > div.container::after {
   content: "";
   position: absolute;
   width: 60px;
@@ -616,13 +618,15 @@ section.container:nth-of-type(even)::after {
 }
 
 /* THIRD ONLY */
-#guidelines section.container {
+#guidelines > section.container,
+#files > div.container {
   border-color: #ffd700;
   box-shadow: 0 0 2px #ffd700;
   box-shadow: 0 0 8px #ffd700;
 }
 
-#guidelines section.container::after {
+#guidelines > section.container::after,
+#files > div.container::after {
   background-image: url("background-svg/lightcycleyellow.svg");
   offset-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 0%);
 }

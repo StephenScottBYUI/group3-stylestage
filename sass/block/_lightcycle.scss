@@ -23,7 +23,8 @@
 #Lightcycle SVG
 \*--------------------*/
 
-section.container {
+section.container,
+#files > div.container {
   position: relative;
   overflow: visible;
   isolation: isolate;
@@ -43,7 +44,8 @@ section.container {
 /* =========================
    BIKE
    ========================= */
-section.container::after {
+section.container::after,
+#files > div.container::after {
   content: "";
   position: absolute;
 
@@ -84,13 +86,15 @@ section.container:nth-of-type(even)::after {
 }
 
 /* THIRD ONLY */
-#guidelines section.container {
+#guidelines > section.container,
+#files > div.container {
   border-color: g.$tron-yellow;
   box-shadow: 0 0 2px g.$tron-yellow;
   box-shadow: 0 0 8px g.$tron-yellow;
 }
 
-#guidelines section.container::after {
+#guidelines > section.container::after,
+#files > div.container::after {
   background-image: url("background-svg/lightcycleyellow.svg");
 
   offset-path: polygon(
