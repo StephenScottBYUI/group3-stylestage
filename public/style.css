@@ -345,7 +345,7 @@ body::before, body nav::before {
 
 .container, body nav {
   position: relative;
-  padding: 1rem;
+  padding: 1.5rem;
   background: #071621;
   border: 2px solid #00bfff;
   box-shadow: 0 0 8px #00bfff;
@@ -558,6 +558,85 @@ blockquote {
 }
 .page-footer .container > :last-child {
   margin-bottom: 0;
+}
+
+/*--------------------*\
+#custom properties
+\*--------------------*/
+@property --angle {
+  syntax: "<angle>";
+  initial-value: -180deg;
+  inherits: true;
+}
+/*--------------------*\
+#Lightcycle SVG
+\*--------------------*/
+section.container {
+  position: relative;
+  overflow: visible;
+  isolation: isolate;
+  --duration: 10s;
+  /* SHARED PATH */
+  --path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%,
+    0% 0%
+  );
+}
+
+/* =========================
+   BIKE
+   ========================= */
+section.container::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: url("background-svg/lightcycle.svg") center/contain no-repeat;
+  offset-path: var(--path);
+  offset-distance: 0%;
+  offset-rotate: auto 90deg;
+  animation: travel var(--duration) linear infinite;
+  z-index: 5;
+  pointer-events: none;
+}
+
+section.container:nth-of-type(even) {
+  border-color: #d42257;
+  box-shadow: 0 0 2px #d42257;
+  box-shadow: 0 0 8px #d42257;
+}
+
+section.container:nth-of-type(even)::after {
+  background: url("background-svg/lightcyclered.svg") center/contain no-repeat;
+  /*changed direction of travel*/
+  offset-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 0%);
+}
+
+/* THIRD ONLY */
+#guidelines section.container {
+  border-color: #ffd700;
+  box-shadow: 0 0 2px #ffd700;
+  box-shadow: 0 0 8px #ffd700;
+}
+
+#guidelines section.container::after {
+  background-image: url("background-svg/lightcycleyellow.svg");
+  offset-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 0%);
+}
+
+/* =========================
+   SINGLE SOURCE OF MOTION
+   ========================= */
+@keyframes travel {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
