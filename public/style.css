@@ -442,9 +442,6 @@ body nav ul li {
 }
 
 /*--------------------*\
-#Import
-\*--------------------*/
-/*--------------------*\
 #About
 \*--------------------*/
 #about section:nth-child(2) {
@@ -634,7 +631,6 @@ section.container:nth-of-type(even)::after {
 #guidelines > section.container::after,
 #files > div.container::after {
   background-image: url("background-svg/lightcycleyellow.svg");
-  offset-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 0%);
 }
 
 /* =========================
