@@ -13,6 +13,13 @@ body {
     /*color of horizontal line*/
       linear-gradient(90deg, g.$legacy-blue 1px, transparent 1px); /*color of vertical line*/
   background-size: 50px 50px; /*size of grid cell*/
+
+  /*background image*/
+  background-image: url("background-svg/website-background.svg");
+  background-attachment: fixed; // keeps the background from scrolling
+  background-repeat: no-repeat; // prevents tiling
+  background-size: cover; // makes it fill the width and height
+  background-position: center;
 }
 
 /*movement in background when moving down the grid*/
@@ -30,16 +37,6 @@ body::before {
   z-index: -1;
   filter: drop-shadow(0 0 3px g.$grid-black);
 }
-
-//I added my image that I created as a background if you want to test it out.
-
-// body {
-//   background-image: url("background-svg/website-background.svg");
-//   background-attachment: fixed; // keeps the background from scrolling
-//   background-repeat: no-repeat; // prevents tiling
-//   background-size: cover; // makes it fill the width and height
-//   background-position: center;
-// }
 
 .container {
   position: relative;
