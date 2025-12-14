@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "sass:string";
 @use "sass:color";
 @use "fonts" as f;
 $tron-blue: #00ffff !default;
@@ -34,15 +35,15 @@ $colors: (
   @return map.get($colors, $key);
 }
 
-@function svgColor($color) {
-  @return "%23" + str-slice("#{color($color)}", 2, -1);
+@function svgColor($key) {
+  @return "%23" + string.slice("#{color($key)}", 2);
 }
 
 @function font-family($key) {
   @return map.get($font-families, $key);
 }
 
-$link-color: color(primary) !default;
+$link-color: color(highlights) !default;
 $border-radius: 8px !default;
 
 $font-weight-strong: 500 !default;
@@ -68,12 +69,10 @@ $font-families: (
 
 // stylelint-disable
 :root {
-  @each $key, $color in $colors {
-    --color-#{$key}: #{$color};
-  }
-
+  --color-text: #{color(text)};
+  --color-bg: #{color(bg-color)};
   --color-anchor: #{$link-color};
-  --font-family: f.$copy-font;
+
   --font-weight-strong: #{$font-weight-strong};
 
   @each $key, $size in $font-sizes {

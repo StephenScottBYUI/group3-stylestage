@@ -70,7 +70,8 @@
 
         &:hover {
           transform: scale(1.12);
-          box-shadow: 0 0 25px g.$legacy-blue inset 0 0 25px g.$legacy-blue;
+          box-shadow: 0 0 10px g.$legacy-blue, 0 0 25px g.$legacy-blue,
+            inset 0 0 15px g.$legacy-blue;
         }
       }
     }

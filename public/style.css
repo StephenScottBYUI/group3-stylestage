@@ -2,11 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 :root {
   --color-text: #e0ffff;
-  --color-highlights: #00bfff;
-  --color-bg-color: #071621;
-  --color-special-text: #d42257;
-  --color-anchor: ;
-  --font-family: f.$copy-font;
+  --color-bg: #071621;
+  --color-anchor: #00bfff;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
   --font-size-h2: 3rem;
@@ -585,7 +582,7 @@ body nav ul li {
 }
 #about section:nth-child(2) ul li:hover {
   transform: scale(1.12);
-  box-shadow: 0 0 25px #00bfff inset 0 0 25px #00bfff;
+  box-shadow: 0 0 10px #00bfff, 0 0 25px #00bfff, inset 0 0 15px #00bfff;
 }
 @media (max-width: 35rem) {
   #about section:nth-child(2)::before {
