@@ -147,3 +147,56 @@ svg {
     }
   }
 }
+
+.profile {
+  &-title {
+    span:nth-child(2) {
+      content: none;
+      color: g.$background-color;
+      &::before {
+        content: "Tronathan";
+        color: g.$white-light;
+      }
+    }
+  }
+  &-author {
+    span:nth-child(2) {
+      content: none;
+      color: g.$background-color;
+      &::before {
+        content: "Carol Anderson, Blayne Kiser, Stephen Scott";
+        color: g.$white-light;
+      }
+    }
+  }
+  &-twitter {
+    span:nth-child(2) {
+      & a {
+        text-decoration: none;
+        content: none;
+        color: g.$background-color;
+      }
+      content: none;
+      color: g.$background-color;
+      &::before {
+        content: "@fatnhappy21";
+        color: g.$white-light;
+      }
+    }
+  }
+  &-website {
+    span:nth-child(2) {
+      & a {
+        text-decoration: none;
+        content: none;
+        color: g.$background-color;
+      }
+      content: none;
+      color: g.$background-color;
+      &::before {
+        content: "instagram.com";
+        color: g.$white-light;
+      }
+    }
+  }
+}

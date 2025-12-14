@@ -485,6 +485,49 @@ svg {
   font-weight: 900;
 }
 
+.profile-title span:nth-child(2) {
+  content: none;
+  color: #071621;
+}
+.profile-title span:nth-child(2)::before {
+  content: "Tronathan";
+  color: #e0ffff;
+}
+.profile-author span:nth-child(2) {
+  content: none;
+  color: #071621;
+}
+.profile-author span:nth-child(2)::before {
+  content: "Carol Anderson, Blayne Kiser, Stephen Scott";
+  color: #e0ffff;
+}
+.profile-twitter span:nth-child(2) a {
+  text-decoration: none;
+  content: none;
+  color: #071621;
+}
+.profile-twitter span:nth-child(2) {
+  content: none;
+  color: #071621;
+}
+.profile-twitter span:nth-child(2)::before {
+  content: "@fatnhappy21";
+  color: #e0ffff;
+}
+.profile-website span:nth-child(2) a {
+  text-decoration: none;
+  content: none;
+  color: #071621;
+}
+.profile-website span:nth-child(2) {
+  content: none;
+  color: #071621;
+}
+.profile-website span:nth-child(2)::before {
+  content: "instagram.com";
+  color: #e0ffff;
+}
+
 body nav {
   border: 2px solid #d42257;
   box-shadow: 0 0 8px #d42257;
