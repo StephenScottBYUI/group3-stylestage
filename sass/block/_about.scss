@@ -76,7 +76,6 @@
     }
 
     &::before {
-
       @media (max-width: 35rem) {
         transform: scale(2) translate(-25%, -25%);
       }
@@ -115,4 +114,6 @@ blockquote {
       color.adjust(g.$background-color, $lightness: -10%),
     -0.2rem -0.2rem 0.5rem color.adjust(g.$background-color, $lightness: 20%);
   border-radius: 10px;
+  min-width: 150px;
+  @include g.center;
 }

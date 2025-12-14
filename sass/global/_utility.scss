@@ -18,3 +18,8 @@
     0 0 24px $color;
   transition: all 0.75s ease-in-out;
 }
+
+@mixin glow-border($color: t.$legacy-blue) {
+  border: 2px solid $color;
+  box-shadow: 0 0 8px $color;
+}

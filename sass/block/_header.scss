@@ -12,6 +12,26 @@ $header: "header .container";
   animation: lights-off 3s ease forwards;
   animation-iteration-count: 4;
 
+  .link-github:hover svg path,
+  .link-github:focus-visible svg path {
+    fill: g.$white-light;
+    filter: drop-shadow(0 0 4px g.$legacy-blue)
+      drop-shadow(0 0 8px g.$legacy-blue) drop-shadow(0 0 12px g.$legacy-blue);
+  }
+
+  .link-github {
+    padding: 0.5rem;
+
+    &:hover {
+      border: 1px solid g.$white-light;
+      box-shadow: 0 0 8px g.$legacy-blue;
+      background-color: g.$tron-red;
+    }
+    &:active {
+      background-color: transparent;
+    }
+  }
+
   h1 {
     @include g.glow-text(g.$legacy-blue, g.$white-light);
     animation: text-pulse 3s ease;

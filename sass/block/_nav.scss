@@ -1,8 +1,10 @@
 @use "body";
 @use "../global" as g;
 body nav {
-  @extend body, .container;
+  @include g.glow-border(g.$tron-red);
+  background-color: g.$background-color;
   margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   height: fit-content;
   min-height: 100px;
   ul {
